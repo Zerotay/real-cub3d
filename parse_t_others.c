@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 11:54:22 by dongguki          #+#    #+#             */
-/*   Updated: 2021/03/13 11:54:23 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:34:55 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_map	fill_r(t_map map, char *line)
 	return (map);
 }
 
-int	save_color(char *line, int *i, int *tmp, int *var)
+int		save_color(char *line, int *i, int *tmp, int *var)
 {
 	int	check;
 

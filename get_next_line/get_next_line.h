@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/13 22:05:37 by dongguki          #+#    #+#             */
-/*   Updated: 2021/02/27 11:03:00 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:44:26 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-#define BUFFER_SIZE 32
+# define BUFFER_SIZE 32
 
 int		get_next_line(int fd, char **line);
 size_t	ft_strlen(const char *s);

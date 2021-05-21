@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 11:53:51 by dongguki          #+#    #+#             */
-/*   Updated: 2021/03/13 11:53:52 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:33:16 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ t_img	draw_we(t_cub cub, double x, double y, int ray)
 		cub.ax = trunc((y - trunc(y)) * -1 * cub.img_we.width);
 	else
 		cub.ax = cub.img_we.width \
-				 - trunc((y - trunc(y)) * cub.img_we.width) - 1;
+				- trunc((y - trunc(y)) * cub.img_we.width) - 1;
 	wall_height = (int)(cub.map.sy / (2 * dist * tan(cub.fovv / 2)));
 	top = (cub.map.sy / 2) - (wall_height / 2);
 	i = top;

@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 11:54:02 by dongguki          #+#    #+#             */
-/*   Updated: 2021/03/13 11:54:03 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:33:31 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	free_map(t_map map)
 	map.i_we = 0;
 }
 
-int	free_error(t_map map)
+int		free_error(t_map map)
 {
 	printf("Error\n");
 	free_map(map);

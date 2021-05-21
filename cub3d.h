@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 11:53:29 by dongguki          #+#    #+#             */
-/*   Updated: 2021/03/13 13:49:31 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:51:00 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,7 @@
 # define X				REAL_X_POSITIOM
 # define Y				REAL_X_POSITIOM
 
-
-
-typedef struct s_map
+typedef struct	s_map
 {
 	unsigned char	t_flag;
 	int				sx;
@@ -68,7 +66,7 @@ typedef struct s_map
 	t_list			*py;
 }				t_map;
 
-typedef struct s_img
+typedef struct	s_img
 {
 	void	*img;
 	int		bpp;
@@ -79,7 +77,7 @@ typedef struct s_img
 	int		width;
 }				t_img;
 
-typedef struct s_cub
+typedef struct	s_cub
 {
 	t_map	map;
 	void	*mlx;
@@ -118,71 +116,71 @@ typedef struct s_cub
 }				t_cub;
 
 /*
-* sx,sy : screen. width and height of screen
-* px,py : position. coorndinate of player in entire map
-* rx,ry : real. exact location of player in 1*1 square
-* vx,vy : vim! nexux between ony ray and integer of graph
-* ax,ay : adress. adress of image
-* ft,gt : function of ray, and the inverse's (fucntion, gunction)
+** sx,sy : screen. width and height of screen
+** px,py : position. coorndinate of player in entire map
+** rx,ry : real. exact location of player in 1*1 square
+** vx,vy : vim! nexux between ony ray and integer of graph
+** ax,ay : adress. adress of image
+** ft,gt : function of ray, and the inverse's (fucntion, gunction)
 */
 
-t_map	map_init(t_map map);
-t_map	parse(char *gv, t_map map);
+t_map			map_init(t_map map);
+t_map			parse(char *gv, t_map map);
 
-t_map	parse_type(t_map map, int fd);
-t_map	fill_r(t_map map, char *line);
-t_map	fill_no(t_map map, char *line);
-t_map	fill_so(t_map map, char *line);
-t_map	fill_we(t_map map, char *line);
-t_map	fill_ea(t_map map, char *line);
-t_map	fill_s(t_map map, char *line);
-t_map	fill_f(t_map map, char *line);
-t_map	fill_c(t_map map, char *line);
+t_map			parse_type(t_map map, int fd);
+t_map			fill_r(t_map map, char *line);
+t_map			fill_no(t_map map, char *line);
+t_map			fill_so(t_map map, char *line);
+t_map			fill_we(t_map map, char *line);
+t_map			fill_ea(t_map map, char *line);
+t_map			fill_s(t_map map, char *line);
+t_map			fill_f(t_map map, char *line);
+t_map			fill_c(t_map map, char *line);
 
-t_map	check_map_valid(t_map map, int i, t_list *tmp);
-t_map	make_list(t_map map, int fd);
-t_map	parse_map(t_map map);
+t_map			check_map_valid(t_map map, int i, t_list *tmp);
+t_map			make_list(t_map map, int fd);
+t_map			parse_map(t_map map);
 
-void	display(t_map map);
-int		gogo(t_cub *cub);
-t_img	singlelight(t_cub cub, int ray);
-t_cub	cub_setting(t_cub cub);
-t_cub	cub_init(t_cub cub);
+void			display(t_map map);
+int				gogo(t_cub *cub);
+t_img			singlelight(t_cub cub, int ray);
+t_cub			cub_setting(t_cub cub);
+t_cub			cub_init(t_cub cub);
 
-t_img	draw_spr(t_cub cub, int ray);
-t_img	draw_ceiling(t_cub cub, int ray, int top);
-t_img	draw_floor(t_cub cub, int ray, int i);
-t_img	draw_no(t_cub cub, double x, double y, int ray);
-t_img	draw_ea(t_cub cub, double x, double y, int ray);
-t_img	draw_so(t_cub cub, double x, double y, int ray);
-t_img	draw_we(t_cub cub, double x, double y, int ray);
+t_img			draw_spr(t_cub cub, int ray);
+t_img			draw_ceiling(t_cub cub, int ray, int top);
+t_img			draw_floor(t_cub cub, int ray, int i);
+t_img			draw_no(t_cub cub, double x, double y, int ray);
+t_img			draw_ea(t_cub cub, double x, double y, int ray);
+t_img			draw_so(t_cub cub, double x, double y, int ray);
+t_img			draw_we(t_cub cub, double x, double y, int ray);
 
-void	link_spr(t_cub cub);
-t_img	shoot_d(t_cub cub, int ray);
-t_img	shoot_c(t_cub cub, int ray);
-t_img	shoot_b(t_cub cub, int ray);
-t_img	shoot_a(t_cub cub, int ray);
-t_img	shoot_up(t_cub cub, int ray);
-t_img	shoot_left(t_cub cub, int ray);
-t_img	shoot_down(t_cub cub, int ray);
-t_img	shoot_right(t_cub cub, int ray);
+void			link_spr(t_cub cub);
+t_img			shoot_d(t_cub cub, int ray);
+t_img			shoot_c(t_cub cub, int ray);
+t_img			shoot_b(t_cub cub, int ray);
+t_img			shoot_a(t_cub cub, int ray);
+t_img			shoot_up(t_cub cub, int ray);
+t_img			shoot_left(t_cub cub, int ray);
+t_img			shoot_down(t_cub cub, int ray);
+t_img			shoot_right(t_cub cub, int ray);
 
-t_cub	move_forward(t_cub cub);
-t_cub	move_backward(t_cub cub);
-t_cub	move_left(t_cub cub);
-t_cub	move_right(t_cub cub);
-int		is_xcollission(t_cub cub, double x);
-int		is_ycollission(t_cub cub, double y);
+t_cub			move_forward(t_cub cub);
+t_cub			move_backward(t_cub cub);
+t_cub			move_left(t_cub cub);
+t_cub			move_right(t_cub cub);
+int				is_xcollission(t_cub cub, double x);
+int				is_ycollission(t_cub cub, double y);
 
-int		keyrelease(int keycode, t_cub *cub);
-int		keypress(int keycode, t_cub *cub);
-int		clientclick(t_cub *cub);
+int				keyrelease(int keycode, t_cub *cub);
+int				keypress(int keycode, t_cub *cub);
+int				clientclick(t_cub *cub);
 
-void	free_exit(t_cub cub);
-void	free_mlx(t_cub cub);
-void	free_map(t_map map);
-int		free_error(t_map map);
+void			free_exit(t_cub cub);
+void			free_mlx(t_cub cub);
+void			free_map(t_map map);
+int				free_error(t_map map);
 
-int		make_bmp(char *gv);
+int				make_bmp(char *gv);
 
 #endif

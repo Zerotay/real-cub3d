@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 11:54:09 by dongguki          #+#    #+#             */
-/*   Updated: 2021/03/13 11:54:10 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:33:53 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	set(unsigned char *header, int value)
 	header[3] = (unsigned char)(value >> 24);
 }
 
-int	get_color(t_cub cub, int x, int y)
+int		get_color(t_cub cub, int x, int y)
 {
 	int	rgb;
 	int	color;
@@ -30,7 +30,7 @@ int	get_color(t_cub cub, int x, int y)
 	return (rgb);
 }
 
-int	set_header(t_cub cub, int fd, int pad)
+int		set_header(t_cub cub, int fd, int pad)
 {
 	unsigned char	header[54];
 	int				size;
@@ -53,7 +53,7 @@ int	set_header(t_cub cub, int fd, int pad)
 	return (0);
 }
 
-int	draw_bmp(t_cub cub, int fd, int pad)
+int		draw_bmp(t_cub cub, int fd, int pad)
 {
 	int	i;
 	int	j;
@@ -75,7 +75,7 @@ int	draw_bmp(t_cub cub, int fd, int pad)
 	return (0);
 }
 
-int	make_bmp(char *gv)
+int		make_bmp(char *gv)
 {
 	t_cub	cub;
 	int		pad;

@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 11:54:06 by dongguki          #+#    #+#             */
-/*   Updated: 2021/03/13 13:27:29 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 15:26:51 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,18 +52,27 @@ t_cub	cub_init(t_cub cub)
 	return (cub);
 }
 
-int	main(int gc, char **gv)
+int		isit_cub(char *title)
+{
+	if (ft_strncmp(title + ft_strlen(title) - 4, ".cub", 4))
+		return (1);
+	return (0);
+}
+
+int		main(int gc, char **gv)
 {
 	t_map	map;
 
 	map.t_flag = 0;
-	if (gc == 3 && !ft_strncmp(gv[2], "--save", 6))
-		make_bmp(gv[1]);
-	else if (gc != 2 || ft_strncmp((gv[1] + ft_strlen(gv[1]) - 4), ".cub", 4))
-	{
+	if (gc == 3)
+		if (!ft_strncmp(gv[2], "--save", 6) && !isit_cub(gv[1]))
+			make_bmp(gv[1]);
+		else if (!ft_strncmp(gv[1], "--save", 6) && !isit_cub(gv[2]))
+			make_bmp(gv[2]);
+		else
+			printf("Error\n: not valid arguments\n");
+	else if (gc != 2 || isit_cub(gv[1]))
 		printf("Error\n: not valid arguments\n");
-		return (0);
-	}
 	else
 	{
 		map = map_init(map);

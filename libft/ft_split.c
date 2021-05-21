@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 12:11:09 by dongguki          #+#    #+#             */
-/*   Updated: 2021/03/10 09:43:07 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:41:13 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	count(char const *s, char c)
 	return (j);
 }
 
-static void	stop(char **ans, size_t i)
+static void		stop(char **ans, size_t i)
 {
 	size_t	j;
 
@@ -43,7 +43,7 @@ static void	stop(char **ans, size_t i)
 	free(ans);
 }
 
-static char	**make(char const *s, char c, char **ans, size_t wc)
+static char		**make(char const *s, char c, char **ans, size_t wc)
 {
 	size_t		i;
 	size_t		j;
@@ -71,7 +71,7 @@ static char	**make(char const *s, char c, char **ans, size_t wc)
 	return (ans);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char		**ans;
 	size_t		i;

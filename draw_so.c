@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 11:53:45 by dongguki          #+#    #+#             */
-/*   Updated: 2021/03/13 11:53:46 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:32:44 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ t_img	draw_so(t_cub cub, double x, double y, int ray)
 	dist *= cos(cub.direction - cub.deg);
 	if (x < 0)
 		cub.ax = cub.img_so.width \
-				 - trunc((x - trunc(x)) * -1 * cub.img_so.width) - 1;
+				- trunc((x - trunc(x)) * -1 * cub.img_so.width) - 1;
 	else
 		cub.ax = trunc((x - trunc(x)) * cub.img_so.width);
 	wall_height = (int)(cub.map.sy / (2 * dist * tan(cub.fovv / 2)));

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 19:05:48 by dongguki          #+#    #+#             */
-/*   Updated: 2020/12/06 22:22:19 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:38:10 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	ft_pass(const char *str, size_t *i, int *sign)
 		(*i)++;
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	size_t				i;
 	int					sign;

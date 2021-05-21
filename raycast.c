@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 11:54:32 by dongguki          #+#    #+#             */
-/*   Updated: 2021/03/13 13:49:25 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 14:35:11 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ t_img	singlelight(t_cub cub, int ray)
 	return (cub.scr);
 }
 
-int	gogo(t_cub *cub)
+int		gogo(t_cub *cub)
 {
 	int	ray;
 
