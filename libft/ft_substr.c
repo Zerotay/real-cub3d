@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dongguki <dongguki@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/22 12:08:31 by dongguki          #+#    #+#             */
-/*   Updated: 2021/03/10 09:45:21 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 16:38:39 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (0);
-	al = (char *)malloc(sizeof(char) * (len + 1));
+	al = ft_calloc(sizeof(char), len + 1);
 	if (!al)
 		return (0);
 	i = 0;

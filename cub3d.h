@@ -6,7 +6,7 @@
 /*   By: dongguki <dongguki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 11:53:29 by dongguki          #+#    #+#             */
-/*   Updated: 2021/05/21 14:51:00 by dongguki         ###   ########.fr       */
+/*   Updated: 2021/05/21 16:12:08 by dongguki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@
 # define TURN_RATE		0.05
 # define TR				TURN_RATE
 # define REAL_X_POSITIOM	0.5
-# define REAL_Y_POSITIOM	0.0
+# define REAL_Y_POSITIOM	0.5
 # define X				REAL_X_POSITIOM
 # define Y				REAL_X_POSITIOM
 
@@ -119,7 +119,7 @@ typedef struct	s_cub
 ** sx,sy : screen. width and height of screen
 ** px,py : position. coorndinate of player in entire map
 ** rx,ry : real. exact location of player in 1*1 square
-** vx,vy : vim! nexux between ony ray and integer of graph
+** vx,vy : vim! nexus between ony ray and integer of graph
 ** ax,ay : adress. adress of image
 ** ft,gt : function of ray, and the inverse's (fucntion, gunction)
 */
