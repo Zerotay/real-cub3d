@@ -35,19 +35,19 @@ t_cub	load_mlx_2(t_cub cub)
 	cub.img_so.img = mlx_xpm_file_to_image(cub.mlx, \
 				cub.map.i_so, &cub.img_so.width, &cub.img_so.height);
 	if (!cub.img_so.img)
-		free_exit(cub);
+		free_error_exit(cub);
 	cub.img_ea.img = mlx_xpm_file_to_image(cub.mlx, \
 				cub.map.i_ea, &cub.img_ea.width, &cub.img_ea.height);
 	if (!cub.img_ea.img)
-		free_exit(cub);
+		free_error_exit(cub);
 	cub.img_we.img = mlx_xpm_file_to_image(cub.mlx, \
 				cub.map.i_we, &cub.img_we.width, &cub.img_we.height);
 	if (!cub.img_we.img)
-		free_exit(cub);
+		free_error_exit(cub);
 	cub.img_s.img = mlx_xpm_file_to_image(cub.mlx, \
 				cub.map.i_s, &cub.img_s.width, &cub.img_s.height);
 	if (!cub.img_s.img)
-		free_exit(cub);
+		free_error_exit(cub);
 	return (cub);
 }
 

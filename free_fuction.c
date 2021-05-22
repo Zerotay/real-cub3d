@@ -64,3 +64,9 @@ int		free_error(t_map map)
 	free_map(map);
 	exit(0);
 }
+
+void	free_error_exit(t_cub cub)
+{
+	printf("Error\n");
+	free_exit(cub);
+}

@@ -27,7 +27,6 @@ t_img	single_spr(t_cub cub, int ray, t_list *curr)
 		cub.dst = top * cub.scr.sl + ray * (cub.scr.bpp / 8) + cub.scr.adr;
 		cub.srcs = cub.ay * cub.img_s.sl \
 					+ cub.ax * (cub.img_s.bpp / 8) + cub.img_s.adr;
-		// printf("dest : %p, xy : %d %d  srcs : %p xy : %d %d \n", cub.dst, ray, top, cub.srcs, cub.ax, cub.ay);
 		if (*(unsigned int *)cub.srcs <= 0x00ffffff)
 			*(unsigned int *)cub.dst = *(unsigned int *)cub.srcs;
 	}

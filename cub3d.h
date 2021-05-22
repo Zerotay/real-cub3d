@@ -180,6 +180,7 @@ void			free_exit(t_cub cub);
 void			free_mlx(t_cub cub);
 void			free_map(t_map map);
 int				free_error(t_map map);
+void			free_error_exit(t_cub cub);
 
 int				make_bmp(char *gv);
 
